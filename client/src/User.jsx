@@ -7,7 +7,7 @@ const User = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/")
+      .get("https://crud-backend-g8kk.onrender.com")
       .then((res) => {
         setUser(res.data);
       })
@@ -18,7 +18,7 @@ const User = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:3000/deleteUser/${id}`) 
+      .delete(`https://crud-backend-g8kk.onrender.com/deleteUser/${id}`) 
       .then(() => {
         setUser((prev) => prev.filter((u) => u._id !== id));
       })
